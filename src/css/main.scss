@@ -1,0 +1,44 @@
+@import "./variables.scss";
+@import "./mixin.scss";
+
+body {
+    background-color: $thirdColor;
+}
+
+.wrapper {
+     display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+    color: $fourColor;
+    transition: all 0.3s;
+    .sidebar-header {
+        padding: 20px;
+        color: $fourColor;
+    }
+
+    .components {
+        padding: 20px 0;
+        border-bottom: 1px solid $mainColor;
+    }
+
+    li {
+        padding: 10px;
+        font-size: 1.1em;
+        display: block;
+
+        &:hover {
+            color: $mainColor;
+            background-color: darken($fourColor, 15);
+        }
+    }
+
+    &.active {
+        margin-left: -250px;
+    }
+}
